@@ -6,5 +6,5 @@ class GameListData {
   final Color color;
   final IconData icon;
 
-  GameListData(this.gameProvider, this.color, this.icon);
+  const GameListData(this.gameProvider, this.color, this.icon);
 }

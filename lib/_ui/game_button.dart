@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:games/_logic/game_list_data.dart';
 import 'package:games/_ui/game_list.dart';
@@ -16,26 +15,19 @@ class GameButton extends StatelessWidget {
   Widget build(BuildContext context) {
     double size = MediaQuery.of(context).size.width / GameList.gamesPerRow - 20;
 
-    if (data == null) {
-      return Container(
-        width: size,
-        height: size,
-      );
-    } else {
-      return FlatButton(
-        onPressed: () {
-          Navigation.push(context, data.gameProvider());
-        },
-        color: data.color,
-        child: Icon(
-          data.icon,
-          size: 50,
-          color: Colors.white,
-        ),
-        height: size,
-        minWidth: size,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      );
-    }
+    return FlatButton(
+      onPressed: () {
+        Navigation.push(context, data.gameProvider());
+      },
+      color: data.color,
+      child: Icon(
+        data.icon,
+        size: 50,
+        color: Colors.white,
+      ),
+      height: size,
+      minWidth: size,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+    );
   }
 }

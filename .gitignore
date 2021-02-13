@@ -84,3 +84,4 @@ lint/tmp/
 
 .dart_tool/
 .flutter-plugins*
+.idea

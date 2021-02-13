@@ -26,3 +26,11 @@ Reach the highest Score and beat your own Highscore by completing as many blocks
 Based on [this](https://play.google.com/store/apps/details?id=athena.studio.woody.sudoku.block.puzzle.brain.training.mind.games.free.happy.offline).
 
 ![Game Picture](https://raw.githubusercontent.com/BertilBraun/Flutter-Games-App/Readme-Data/Images/TetrisSudoku.png "Game Picture")
+
+# Planned
+
+ - sliding puzzle
+ - 2048
+ - Sudoku
+ - others :)
+ 

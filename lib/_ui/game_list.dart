@@ -3,15 +3,17 @@ import 'package:games/_logic/game_list_data.dart';
 import 'package:games/_ui/game_button.dart';
 import 'package:games/slide_2048/slide_2048_provider.dart';
 import 'package:games/sliding_15/sliding_15_provider.dart';
+import 'package:games/sudoku/sudoku_provider.dart';
 import 'package:games/tetris_sudoku/tetris_sudoku_provider.dart';
 
 class GameList extends StatelessWidget {
   static const int gamesPerRow = 3;
 
   final List<GameListData> games = [
-    GameListData(() => TetrisSudokuProvider(), Colors.brown.shade500, Icons.add),
-    GameListData(() => Sliding15Provider(), Colors.brown.shade500, Icons.stacked_line_chart),
-    GameListData(() => Slide2048Provider(), Colors.brown.shade500, Icons.grid_view),
+    GameListData(() => TetrisSudokuProvider(), Icons.add),
+    GameListData(() => Sliding15Provider(), Icons.stacked_line_chart),
+    GameListData(() => Slide2048Provider(), Icons.grid_view),
+    GameListData(() => SudokuProvider(), Icons.room),
   ];
 
   @override

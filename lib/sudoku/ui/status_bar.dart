@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:games/slide_2048/logic/slide_2048.dart';
+import 'package:games/sudoku/logic/sudoku.dart';
 import 'package:provider/provider.dart';
 
 class StatusBar extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -10,15 +11,15 @@ class StatusBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Consumer<Slide2048>(
-            builder: (context, game, child) => Text(
-              'Score: ${game.score}',
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          // Consumer<Sudoku>(
+          //   builder: (context, game, child) => Text(
+          //     'Score: ${game.score}',
+          //     style: const TextStyle(
+          //       fontSize: 20,
+          //       fontWeight: FontWeight.bold,
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

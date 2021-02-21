@@ -51,13 +51,25 @@ Reach the score of 2048 to win!
 
 ![Game Picture](https://raw.githubusercontent.com/BertilBraun/Flutter-Games-App/Readme-Data/Images/2048.png "Game Picture")
 
+# Sudoku
+
+Rules:
+ - Only use the numbers 1 to 9,
+ - Avoid trying to guess the solution to the puzzle,
+ - Only use each number once in each row, column, & grid,
+ - Use the process of elimination as a tactic,
+
+## Goal
+
+Fill out the entire grid to win!
+
+![Game Picture](https://raw.githubusercontent.com/BertilBraun/Flutter-Games-App/Readme-Data/Images/Sudoku.png "Game Picture")
+
 # Planned
 
- - Maze
  - Block Fill
  
  ## Sometime else
- - Sudoku
  - one line - Eulerian path
  - others :)
  

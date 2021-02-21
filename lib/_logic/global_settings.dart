@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -9,6 +12,14 @@ class GlobalSettings extends ChangeNotifier {
   bool _vibrationOn = true;
 
   static Future<GlobalSettings> initNew() async {
+
+    if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+      // Not clean but only happens once at startup, exactly whats needed
+      await DesktopWindow.setWindowSize(const Size(400, 700));
+      // DesktopWindow.setMaxWindowSize(const Size(400, 700));
+      DesktopWindow.setMinWindowSize(const Size(400, 700));
+    }
+
     var preferences = await SharedPreferences.getInstance();
 
     GlobalSettings settings = GlobalSettings._();

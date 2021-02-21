@@ -3,12 +3,11 @@ import 'package:games/_logic/global_settings.dart';
 import 'package:games/_ui/home_page.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return FutureProvider<GlobalSettings>(

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class GameListData {
   final Widget Function() gameProvider;
-  final Color color;
+  final Color color = Colors.brown.shade500;
   final IconData icon;
 
-  const GameListData(this.gameProvider, this.color, this.icon);
+  GameListData(this.gameProvider, this.icon);
 }

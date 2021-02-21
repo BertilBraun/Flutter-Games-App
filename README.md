@@ -72,4 +72,5 @@ Fill out the entire grid to win!
  ## Sometime else
  - one line - Eulerian path
  - others :)
+ - [Unblock](https://github.com/Unknowncmbk/unblock-me-generator)
  

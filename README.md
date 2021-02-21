@@ -38,9 +38,26 @@ Recreate the original layout of the Puzzle
 
 ![Game Picture](https://raw.githubusercontent.com/BertilBraun/Flutter-Games-App/Readme-Data/Images/Sliding15.png "Game Picture")
 
+### 2048
+
+A 4x4 grid with blocks of size 1x 2x 4x spawning on each move.
+
+By swiping in one of the four directions, the whole grid gets moved in that direction
+Collide two equal blocks to combine them and double their number.
+
+## Goal
+
+Reach the score of 2048 to win!
+
+![Game Picture](https://raw.githubusercontent.com/BertilBraun/Flutter-Games-App/Readme-Data/Images/2048.png "Game Picture")
+
 # Planned
 
- - 2048
+ - Maze
+ - Block Fill
+ 
+ ## Sometime else
  - Sudoku
+ - one line - Eulerian path
  - others :)
  

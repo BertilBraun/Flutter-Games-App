@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:games/tetris_sudoku/logic/drag_data.dart';
 import 'package:games/tetris_sudoku/logic/tetris_sudoku.dart';
 import 'package:games/tetris_sudoku/ui/block.dart';
-import 'package:games/_widgets/game_over_dialog.dart';
+import 'package:games/_widgets/game_dialog.dart';
 import 'package:provider/provider.dart';
 
 class BlockDragTarget extends StatelessWidget {

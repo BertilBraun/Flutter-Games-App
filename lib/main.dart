@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       lazy: false,
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primarySwatch: Colors.brown,
           ),

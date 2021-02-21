@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:games/_widgets/game_over_dialog.dart';
+import 'package:games/_widgets/game_dialog.dart';
 import 'package:games/sliding_15/logic/drag_data.dart';
 import 'package:games/sliding_15/logic/sliding_15.dart';
 import 'package:games/sliding_15/sliding_15_settings.dart';
+import 'package:games/sliding_15/ui/game_block.dart';
 import 'package:provider/provider.dart';
 
 class GameGrid extends StatelessWidget {
@@ -28,7 +29,7 @@ class GameGrid extends StatelessWidget {
                 bool wasMoved = game.moveFromTo(data.fromIndex, index);
 
                 if (game.isGameOver()) {
-                  await showGameOverDialog(
+                  await showGameWonDialog(
                       context,
                       -1,
                       game.shuffle,
@@ -53,63 +54,6 @@ class GameGrid extends StatelessWidget {
           },
         ),
       ),
-    );
-  }
-}
-
-class Block extends StatelessWidget {
-  const Block({
-    Key key,
-    @required this.itemSize,
-    @required this.index,
-  }) : super(key: key);
-
-  final int index;
-  final double itemSize;
-
-  @override
-  Widget build(BuildContext context) {
-    return Consumer<Sliding15>(
-      builder: (context, game, child) {
-        int value = game.getValueAt(index);
-        if (value == null) {
-          return SizedBox(
-            width: itemSize,
-            height: itemSize,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 0.1,
-                  ),
-                  color: Colors.brown.shade300),
-            ),
-          );
-        } else {
-          return SizedBox(
-            width: itemSize,
-            height: itemSize,
-            child: DecoratedBox(
-              child: Center(
-                  child: Text(
-                value.toString(),
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              )),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 0.1,
-                  ),
-                  color: Colors.brown.shade300),
-            ),
-          );
-        }
-      },
     );
   }
 }

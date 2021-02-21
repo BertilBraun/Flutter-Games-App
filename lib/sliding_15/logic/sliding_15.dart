@@ -74,6 +74,6 @@ class Sliding15 extends ChangeNotifier {
   }
 
   int getValueAt(int index) {
-    return _grid[index];
+    return _grid[index] == null ? null : _grid[index] + 1;
   }
 }

@@ -15,19 +15,21 @@ class GameButton extends StatelessWidget {
   Widget build(BuildContext context) {
     double size = MediaQuery.of(context).size.width / GameList.gamesPerRow - 20;
 
-    return FlatButton(
-      onPressed: () {
-        Navigation.push(context, data.gameProvider());
-      },
-      color: data.color,
-      child: Icon(
-        data.icon,
-        size: 50,
-        color: Colors.white,
+    return Center(
+      child: FlatButton(
+        onPressed: () {
+          Navigation.push(context, data.gameProvider());
+        },
+        color: data.color,
+        child: Icon(
+          data.icon,
+          size: 50,
+          color: Colors.white,
+        ),
+        height: size,
+        minWidth: size,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
-      height: size,
-      minWidth: size,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     );
   }
 }
